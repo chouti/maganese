@@ -16,7 +16,22 @@ var month = d.getMonth()+1;
 	if (month < 10)
 		month = "0"+month;
 var year = d.getFullYear();
-
+var today = year+'-'+month+'-'+date;
+if(parseInt(year/4)==year/4 && month==02 && date==29){
+	var tomorrow = year+'-'+(month+1)+'-'+'01'
+};
+if(parseInt(year/4)!=year/4 && month==02 && date==28){
+	var tomorrow = year+'-'+(month+1)+'-'+'01'
+};
+if((month==04||06||09||11) && date==30){
+	var tomorrow = year+'-'+(month+1)+'-'+'01'
+};
+if((month==01||03||05||07||08||10) && date==30){
+	var tomorrow = year+'-'+(month+1)+'-'+'01'
+};
+if(month==12 && date==31){
+	var tomorrow = (year+1)+'-'+'01'+'-'+'01'
+};
 
 $(document).ready(function(){if (localStorage.length==0) {
 $('#message').append('<p>Please first login your Doit.im account<br /><a href="#" id="options">Option</a></p>');
@@ -37,10 +52,13 @@ $.ajax({
 			var title = item.title;
 			var startarry = item.start_at.split(" ");
 			var start = startarry[0];
-			if(start==year+'-'+month+'-'+date){
+			if(start==today){
 			$('#intime').append('<span><li>' + title + '</li></span>');
-			} else if (start < year+'-'+month+'-'+date){
+			} else if (start < today){
 			$('#overdue').append('<span><li>' + title + '</li></span>');
+			};
+			if(start==tomorrow){
+			$('#next').append('<span><li>' + title + '</li></span>')
 			}
 		});
 		}

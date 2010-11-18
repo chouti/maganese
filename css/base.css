@@ -1,8 +1,20 @@
-body {
-	background-color: #fbfcd4;
+*{
+	margin: 0;
+	padding: 0;
 }
 
-#wrap {
+body{
+	font-size:11px;
+	color: black;
+	
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff5cb), to(#eee09e));
+	
+	text-shadow: 1px 1px 0 white;
+	font-family: Arial, Helvetica, sans-serif;
+	overflow-x: hidden;
+}
+
+#wrap{
 	height: 400px;
 	width: 300px;
 }

@@ -1,0 +1,16 @@
+{
+	"name":"Manganese",
+	"version":"0.1",
+	"description":"This is a simply to-do list extension for Google Chrome.",
+	"icons":{
+		"128":"icon128.png",
+		"64":"icon64.png",
+		"48":"icon48.png"
+	},
+	"permissions":["http://*.doit.im"],
+	"browser_action":{
+		"default_title":"Manganese",
+		"default_icon":"icon48.png",
+		"default_popup":"manganese.html"
+	}
+}

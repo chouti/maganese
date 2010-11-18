@@ -14,6 +14,11 @@ body{
 	overflow-x: hidden;
 }
 
+#upper{
+	margin-right: auto;
+	margin-left: auto;
+}
+
 #wrap{
 	height: 400px;
 	width: 300px;

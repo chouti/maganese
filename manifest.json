@@ -12,5 +12,6 @@
 		"default_title":"Manganese",
 		"default_icon":"img/icon48.png",
 		"default_popup":"manganese.html"
-	}
+	},
+	"options_page": "options.html"
 }

@@ -1,28 +1,24 @@
-	$(document).ready(function() {
-		if (typeof(localStorage) == 'undefined' ) {
-			alert('Your browser does not support HTML5 localStorage. Try upgrading.');
-		} else {
-			$("#login").submit(function(){
-				var newDate = new Date();
-				var itemId = newDate.getTime();
-				var values = new Array();
-				var username = $("input[name='conf_doit_username']").val();
-				var password = $("input[name='conf_doit_password']").val();
+function make_base_auth(user,pass){
+	var tok = user + ':' + pass;
+	var hash = Base64.encode(tok);
+	return "Basic " + hash;
+}
 
-				values.push(username);
-				values.push(password);
+var	doit_username = localStorage.username;
+var doit_password = localStorage.password;
+var auth = make_base_auth(doit_username, doit_password);
+var url = 'https://api.doit.im/v1/settings';
 
-				if (username != "" && password != "") {
-					try {
-						localStorage.setItem(itemId, values.join(';'));
-					} catch (e) {
-						if (e == QUOTA_EXCEEDED_ERR) {
-							alert('Quota exceeded!');
-						}
-					}
-				} else {
-					alert("Username and Password needed.");
-				}
-			});
-		}
-	});
+if (localStorage.length==0) {$("#userinfo").append('<p>Loading user information...</p>')} else{
+$.ajax({
+	url: url,
+	method: 'GET',
+	beforeSend: function(req){
+		req.setRequestHeader('Authorization', auth);
+	},
+	dataType: "json",
+	success: function(data){
+		$('#userinfo').append("<p>You've logged in as:"+data.username+'</p>');
+	}
+});
+};

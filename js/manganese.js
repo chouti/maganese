@@ -13,5 +13,6 @@ $.ajax({
 	beforeSend: function(req){
 		req.setRequestHeader('Authorization', auth);
 	},
-	dataType: "json"
+	dataType: "json",
+	
 });

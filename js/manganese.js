@@ -14,5 +14,10 @@ $.ajax({
 		req.setRequestHeader('Authorization', auth);
 	},
 	dataType: "json",
-	
+	success: function(data){
+		$.each(data.entries, function(i,item){
+			var title = item.title;
+			$('#wrap').append('<li>' + title + '</li>');
+		});
+	}
 });

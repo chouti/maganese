@@ -4,7 +4,7 @@
 }
 
 body{
-	font-size:11px;
+	font-size:13px;
 	color: black;
 	
 	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff5cb), to(#eee09e));
@@ -22,4 +22,11 @@ body{
 #wrap{
 	height: 400px;
 	width: 300px;
+	padding: 15px;
+}
+
+li{
+	border-bottom: 1px dotted #000;
+	padding-top: 10px;
+	padding-bottom: 5px;
 }

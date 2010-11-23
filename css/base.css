@@ -15,8 +15,13 @@ body{
 }
 
 #upper{
-	margin-right: auto;
-	margin-left: auto;
+	padding: 5px;
+	background-color: #5a3a1c;
+	color: white;
+	text-shadow: 1px 1px 0 black;
+	text-align: center;
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+	height: auto;
 }
 
 #wrap{
@@ -25,8 +30,21 @@ body{
 	padding: 15px;
 }
 
+#footer {
+	background-color: #004c8a;
+	font: white;
+	text-shadow: none;
+	height: 20px;
+	width: 100%;
+	padding: 5px;
+}
+
+#footer a{
+	color: white;
+}
+
 li{
-	border-bottom: 1px dotted #000;
+	border-bottom: 1px dashed #c0c0c0;
 	padding-top: 10px;
 	padding-bottom: 5px;
 }

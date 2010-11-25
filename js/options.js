@@ -18,7 +18,7 @@ $.ajax({
 	},
 	dataType: "json",
 	success: function(data){
-		$('#userinfo').append("<p>You've logged in as:"+data.username+'</p>' );
+		$('#userinfo').append("<p>You've logged in as:"+data.username+'<br /><button type="button" id="clear">Clear</button></p>' );
 	}
 });
 };

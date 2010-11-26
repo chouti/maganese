@@ -20,6 +20,9 @@ $.ajax({
 	dataType: "json",
 	success: function(data){
 		$('#userinfo').append("<p>You've logged in as:"+data.username+'<br /><button type="button" id="clear">Clear</button></p>' );
+	},
+	error: function(){
+		$('#userinfo').append('<p>Username or password wrong</p>');
 	}
 });
 };

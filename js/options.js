@@ -9,7 +9,8 @@ var doit_password = localStorage.password;
 var auth = make_base_auth(doit_username, doit_password);
 var url = 'https://api.doit.im/v1/settings';
 
-if (localStorage.length==0) {$("#userinfo").append('<p>Loading user information...</p>')} else{
+$(document).ready(function() {
+	if (localStorage.length==0) {$("#userinfo").append('<p>Loading user information...</p>')} else{
 $.ajax({
 	url: url,
 	method: 'GET',
@@ -22,3 +23,5 @@ $.ajax({
 	}
 });
 };
+});
+

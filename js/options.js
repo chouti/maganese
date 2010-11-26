@@ -25,3 +25,6 @@ $.ajax({
 };
 });
 
+$(document).ready(function() {
+	$('#clear').click(localStorage.clear());
+});

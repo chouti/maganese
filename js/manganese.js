@@ -19,7 +19,7 @@ var year = d.getFullYear();
 
 
 $(document).ready(function(){if (localStorage.length==0) {
-$('#message').append('<p>Please first login your Doit.im account<br /><a href="options.html">Option</a></p>');
+$('#message').append('<p>Please first login your Doit.im account<br /><a href="options.html" target="_blank">Option</a></p>');
 $('#today').hide();
 $('#tomorrow').hide();
 } else{

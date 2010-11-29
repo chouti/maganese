@@ -39,6 +39,11 @@ body{
 	margin: 0 0 0 10px;
 }
 
+#userinfo{
+	margin: 20px auto;
+	width: 500px;
+}
+
 h3{
 	margin-top: 5px;
 	margin-bottom: 15px;

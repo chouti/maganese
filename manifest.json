@@ -7,7 +7,7 @@
 		"64":"img/icon64.png",
 		"48":"img/icon48.png"
 	},
-	"permissions":["https://api.doit.im/"],
+	"permissions":["https://api.doit.im/","tabs"],
 	"browser_action":{
 		"default_title":"Manganese",
 		"default_icon":"img/icon48.png",

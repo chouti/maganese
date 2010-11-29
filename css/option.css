@@ -14,11 +14,20 @@ body{
 	overflow-x: hidden;
 }
 
-#page {
-	margin-right: auto;
-	margin-left: auto;
+#content {
+	margin: 50px auto;
 	padding: 50px;
 	width: 500px;
+}
+
+#upper {
+	padding: 5px;
+	background-color: #5a3a1c;
+	color: white;
+	text-shadow: 1px 1px 0 silver;
+	text-align: center;
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+	height: auto;
 }
 
 #content {
@@ -31,6 +40,7 @@ body{
 }
 
 h3{
-	margin-top: 0px;
-	margin-bottom: 5px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	text-align: center;
 }

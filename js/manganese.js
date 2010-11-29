@@ -18,7 +18,12 @@ var month = d.getMonth()+1;
 var year = d.getFullYear();
 
 
-$(document).ready(function(){if (localStorage.length==0) {$('#today').append('<p>Please first login your Doit.im account<br /><a href="options.html">Option</a></p>');} else{
+$(document).ready(function(){if (localStorage.length==0) {
+$('#message').append('<p>Please first login your Doit.im account<br /><a href="options.html">Option</a></p>');
+$('#today').hide();
+$('#tomorrow').hide();
+} else{
+$('#message').hide();
 $.ajax({
 	url: url,
 	method: 'GET',

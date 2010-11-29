@@ -19,15 +19,11 @@ $.ajax({
 	},
 	dataType: "json",
 	success: function(data){
-		$('#userinfo').append("<p>You've logged in as:"+data.username+'<br /><button type="button" id="clear">Clear</button></p>' );
+		$('#userinfo').append("<p>You've logged in as:"+data.username+'</p>' );
 	},
 	error: function(){
 		$('#userinfo').append('<p>Username or password wrong</p>');
 	}
 });
 };
-});
-
-$(document).ready(function() {
-	$('#clear').click(localStorage.clear());
 });

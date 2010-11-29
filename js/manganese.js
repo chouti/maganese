@@ -19,11 +19,18 @@ var year = d.getFullYear();
 
 
 $(document).ready(function(){if (localStorage.length==0) {
-$('#message').append('<p>Please first login your Doit.im account<br /><a href="options.html" target="_blank">Option</a></p>');
+$('#message').append('<p>Please first login your Doit.im account<br /><a href="#" id="options">Option</a></p>');
 $('#today').hide();
 $('#tomorrow').hide();
 } else{
 $('#message').hide();
+$('#options').click(function(){
+	var url = chrome.extensions.getURL('options.html');
+	chrome.tabs.create({
+		url:url,
+		selected: true
+	});
+});
 $.ajax({
 	url: url,
 	method: 'GET',

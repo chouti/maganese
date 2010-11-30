@@ -24,13 +24,6 @@ $('#today').hide();
 $('#tomorrow').hide();
 } else{
 $('#message').hide();
-$('#options').click(function(){
-	var url = chrome.extensions.getURL('options.html');
-	chrome.tabs.create({
-		url:url,
-		selected: true
-	});
-});
 $.ajax({
 	url: url,
 	method: 'GET',
@@ -54,4 +47,14 @@ $.ajax({
 	}
 });
 };
+});
+
+$(document).ready(function() {
+	$('#options').click(function() {
+		var url = chrome.extension.getURL('options.html');
+		chrome.tabs.create({
+		url: url,
+		selected: true
+		});
+	});
 });

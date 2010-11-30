@@ -1,11 +1,11 @@
 *{
 	margin: 0;
 	padding: 0;
-	width: 300px
+	width: 350px
 }
 
 body {
-	height: 380px;
+	height: 350px;
 }
 
 #wrapper {
@@ -28,7 +28,7 @@ header{
 	text-align: center;
 	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
 	height: auto;
-	width: 300px;
+	width: auto;
 }
 
 #page {
@@ -41,15 +41,15 @@ header{
 #today{
 	position:absolute;
 	left:0px;
-	width: 280px;
+	width: 270px;
 	padding: 15px 10px;
 	text-shadow: none;
 }
 
 #tomorrow{
 	position:absolute;
-	left:300px;
-	width:280px;
+	left:320px;
+	width:270px;
 	padding:15px 10px;
 	text-shadow: none;
 }
@@ -82,5 +82,5 @@ footer a{
 li{
 	border-bottom: 1px dashed #c0c0c0;
 	padding: 10px 0px 5px 0px;
-	width: 280px;
+	width: 260px;
 }

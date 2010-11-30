@@ -58,9 +58,3 @@ $(document).ready(function() {
 		});
 	});
 });
-
-$(document).ready(function() {
-	$('#gotm').click(function(){
-		$('#gotd').scrollTo('section:eq(2)',1000,{over:0.5});
-	});
-});

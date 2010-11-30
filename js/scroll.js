@@ -1,8 +1,8 @@
 // when the DOM is ready...
 $(document).ready(function () {
 
-	var $panels = $('#slider .scrollable > section');
-	var $container = $('#slider .scrollable');
+	var $panels = $('#slider .scrollContainer > section');
+	var $container = $('#slider .scrollContainer');
 
 	// if false, we'll float all the panels left and fix the width 
 	// of the container
@@ -25,8 +25,8 @@ $(document).ready(function () {
 
 	// apply our left + right buttons
 	$scroll
-		.before('<img class="scrollButtons left" src="images/scroll_left.png" />')
-		.after('<img class="scrollButtons right" src="images/scroll_right.png" />');
+		.before('<img class="scrollButtons left" src="img/scroll_left.png" />')
+		.after('<img class="scrollButtons right" src="img/scroll_right.png" />');
 
 	// handle nav selection
 	function selectNav() {

@@ -4,8 +4,6 @@
 		<meta charset="utf-8">
 		<title>Easy2Do</title>		
 		<link rel="stylesheet" type="text/css" href="css/base.css" />
-		<link rel="stylesheet" type="text/css" href="css/buttons.css" />
-		<link rel="stylesheet" type="text/css" href="css/scrollable.css" />
 		<script src="js/Base64.js" type="text/javascript"></script>
 		<script src="js/jquery.min.js" type="text/javascript"></script>
 		<script src="js/jquery.scrollTo.js" type="text/javascript"></script>
@@ -20,9 +18,10 @@
 			<article id="page">
 			<header><h1>Easy2Do</h1></header>
 				<section id="message"></section>
-				<a class="prev browse left" id="gotd"></a>
+				
 				<section id="slider">
-				<section class="scrollable">
+				<section class="scroll">
+				<section class="scrollContainer">
 				<section id="today">
 				<h5>Today:</h5>
 				<p id="intime"></p><br />
@@ -30,16 +29,16 @@
 				<p id="overdue"></p>
 				</section>
 				<section id="tomorrow">
-				<h5>Tomorrow</h5>
+				<h5>Tomorrow:</h5>
 				<p id="next"></p>
 				</section>
 				</section>
 				</section>
-				<a class="next browse right" id="gotm"></a>
-				<section id="push"></section>
+				</section>
 				
+				<section id="push"></section>
 			</article>
-			<footer><a href="#" id="options">Option</a><a href="#" id="gotd">Pre</a><a href="#" id="gotm">Next</a></footer>
+			<footer><a href="#" id="options">Option</a></footer>
 		</section>
 	</body>
 </html>

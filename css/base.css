@@ -1,11 +1,7 @@
 *{
 	margin: 0;
 	padding: 0;
-	width: 350px
-}
-
-body {
-	height: 350px;
+	width: 340px
 }
 
 #wrapper {
@@ -38,25 +34,42 @@ header{
 	margin: 0 auto -20px;
 }
 
-#today{
-	position:absolute;
-	left:0px;
-	width: 270px;
-	padding: 15px 10px;
+#slider {
+	width: 300px;
+	height: 400px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#today, #tomorrow {
 	text-shadow: none;
 }
 
-#tomorrow{
-	position:absolute;
-	left:320px;
-	width:270px;
-	padding:15px 10px;
-	text-shadow: none;
+.scroll {
+	height: 250px;
+	width: 300px;
+	overflow: auto;
+	overflow-x: hidden;
+	position: relative;
+	clear: left;
+	background:repeat-x scroll left bottom;
 }
 
-#intime, #overdue, #next {
-	width: 280px;
+.scrollButtons {
+	position: absolute;
+	top: 200px;
+	cursor: pointer;
+	width: auto;
 }
+
+.scrollButtons.left {
+	left: -20px;
+}
+
+.scrollButtons.right {
+	right: -20px;
+}
+
 
 footer, #push{
 	height: 20px;
@@ -82,5 +95,5 @@ footer a{
 li{
 	border-bottom: 1px dashed #c0c0c0;
 	padding: 10px 0px 5px 0px;
-	width: 260px;
+	width: 300px;
 }

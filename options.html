@@ -11,6 +11,7 @@
 			alert('Your browser does not support HTML5 localStorage. Try upgrading.');
 		} else {
 			$("#login").submit(function(){
+				localStorage.clear();
 				var username = $("input[name='conf_doit_username']").val();
 				var password = $("input[name='conf_doit_password']").val();
 				if (username != "" && password != "") {
@@ -33,7 +34,7 @@
 	</head>
 	<body>
 		<section id="wrapper">
-			<header id="upper"><h1>Manganese Option</h1></header>
+			<header id="upper"><img src="img/icon128.png" alt="icon" align="left"/><h1>Manganese Option</h1></header>
 			<article>
 				<section id="content">
 					<form method="post" id="login">

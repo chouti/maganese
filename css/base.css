@@ -1,17 +1,21 @@
 *{
 	margin: 0;
 	padding: 0;
+	width: 300px
 }
 
-#wrapper{
+body {
+	height: 380px;
+}
+
+#wrapper {
 	font-size:13px;
 	color: black;
 	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff5cb), to(#eee09e));
 	text-shadow: 1px 1px 0 white;
 	font-family: Arial, Helvetica, sans-serif;
 	overflow-x: hidden;
-	height: 400px;
-	width: 300px;
+	height: 100%;
 	margin: 0px;
 	padding: 0px;
 }
@@ -24,25 +28,40 @@ header{
 	text-align: center;
 	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
 	height: auto;
+	width: 300px;
+}
+
+#page {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -20px;
 }
 
 #today{
-	height: auto;
 	width: 300px;
 	padding: 15px;
 }
 
-#footer {
-	background-color: #004c8a;
-	font: white;
-	text-shadow: none;
+footer, #push{
 	height: 20px;
-	width: 100%;
-	padding: 5px;
 }
 
-#footer a{
+footer {
+	background-color: #004c8a;
+	font: white;
+	font-size: 14px;
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+	text-shadow: none;
+	width: 100%;
+	text-align: right;
+
+}
+
+footer a{
 	color: white;
+	margin: 0px 5px 0px 0px;
+	padding: 0px 5px 0px 0px;
 }
 
 li{

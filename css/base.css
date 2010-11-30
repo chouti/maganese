@@ -16,6 +16,16 @@
 	padding: 0px;
 }
 
+#message p{
+	position: absolute;
+	width: 150px;
+	height: auto;
+	margin: 150px auto;
+	left: 100px;
+	overflow: auto;
+	z-index: 1;
+}
+
 header{
 	padding: 5px;
 	background-color: #5a3a1c;
@@ -42,6 +52,7 @@ header{
 }
 
 #today, #tomorrow {
+	margin: 20px auto;
 	text-shadow: none;
 }
 

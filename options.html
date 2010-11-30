@@ -34,24 +34,36 @@
 	</head>
 	<body>
 		<section id="wrapper">
-			<header id="upper"><img src="img/icon128.png" alt="icon" align="left"/><h1>Easy2Do Option</h1></header>
-			<article>
+			<header id="upper"><img src="img/icon128.png" alt="icon" align="left"/><h1>Easy2Do Options</h1></header>
+			<article id="page">
+				<section id="intro">
+					<p>Easy2Do is an Google chrome browser extension. It can display your tasks due to today and tomorrow.<br>
+						You have to login your <a href="https://www.doit.im">Doit.im</a> account before you using it. Haven't got an account yet? Here to <a href="https://i.doit.im/register">register</a> one.</p>
+				</section>
 				<section id="content">
 					<form method="post" id="login">
 						<h3>Login</h3>
 						<ul>
-							<li><label for="username">Username</label><input type="text" name="conf_doit_username" value="">
+							<li><label for="username">Username: </label><input type="text" name="conf_doit_username" value="">
 							</li>
-							<span>Your Doit.im username</span><br>
-							<li><label for="password">Password:</label><input type="password" name="conf_doit_password" value="">
+							<span>Your Doit.im username</span><br><br>
+							<li><label for="password">Password: </label><input type="password" name="conf_doit_password" value="">
 							</li>
 							<span>Your Doit.im password</span><br>
 						</ul>
-
+						<br>
 						<p><input type="submit" value="Continue &rarr;"></p>
 					</form>					
 				</section>
 				<section id="userinfo"></section>
+				<section id="changelog">
+					<p>
+						<li>
+							<h5>2010-11-30</h5>
+							First public release. Very limited function, user can view tasks which due date is today or tomorrow.
+						</li>
+					</p>
+				</section>
 			</article>
 		</section>
 

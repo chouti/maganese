@@ -10,7 +10,7 @@ var auth = make_base_auth(doit_username, doit_password);
 var url = 'https://api.doit.im/v1/settings';
 
 $(document).ready(function() {
-	if (localStorage.length==0) {$("#userinfo").append('<p>Loading user information...</p>')} else{
+	if (localStorage.length==0) {$("#userinfo").append('<p>Need login before loading user information...</p>')} else{
 $.ajax({
 	url: url,
 	method: 'GET',

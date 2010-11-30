@@ -17,7 +17,16 @@ body{
 #content {
 	margin: 50px auto;
 	padding: 50px;
-	width: 500px;
+	width: 250px;
+}
+
+#page{
+	background-color: #c6d477;
+	margin: 0px auto;
+	padding: 60px 20px;
+	width: 600px;
+	height: auto;
+	text-shadow: none;
 }
 
 #upper {
@@ -30,8 +39,13 @@ body{
 	height: auto;
 }
 
+#intro{
+	margin: 0px auto;	
+	width: 600px;
+}
+
 #content {
-	background-color: #fc6;
+	background-color: #ccb965;
 	padding: 0 10px 10px;
 }
 
@@ -42,6 +56,11 @@ body{
 #userinfo{
 	margin: 20px auto;
 	width: 500px;
+}
+
+#changelog{
+	margin: 50px auto;
+	width: 600px;
 }
 
 h3{

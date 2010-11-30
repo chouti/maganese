@@ -8,30 +8,14 @@ var	doit_username = localStorage.username;
 var doit_password = localStorage.password;
 var auth = make_base_auth(doit_username, doit_password);
 var url = 'https://api.doit.im/v1/tasks';
-var d = new Date();
-var date = d.getDate();
-	if (date < 10)
-		date = "0"+date;
-var month = d.getMonth()+1;
-	if (month < 10)
-		month = "0"+month;
-var year = d.getFullYear();
-var today = year+'-'+month+'-'+date;
-if(parseInt(year/4)==year/4 && month==02 && date==29){
-	var tomorrow = year+'-'+(month+1)+'-'+'01'
-};
-if(parseInt(year/4)!=year/4 && month==02 && date==28){
-	var tomorrow = year+'-'+(month+1)+'-'+'01'
-};
-if((month==04||06||09||11) && date==30){
-	var tomorrow = year+'-'+(month+1)+'-'+'01'
-};
-if((month==01||03||05||07||08||10) && date==30){
-	var tomorrow = year+'-'+(month+1)+'-'+'01'
-};
-if(month==12 && date==31){
-	var tomorrow = (year+1)+'-'+'01'+'-'+'01'
-};
+function showdate(n)
+{
+var uom = new Date(new Date()-0+n*86400000);
+uom = uom.getFullYear() + "-" + (uom.getMonth()+1) + "-" + uom.getDate();
+return uom.replace(/\b(\w)\b/g, '0$1');
+}
+var today = showdate(0);
+var tomorrow = showdate(1);
 
 $(document).ready(function(){if (localStorage.length==0) {
 $('#message').append('<p>Please first login your Doit.im account<br /><a href="#" id="options">Option</a></p>');

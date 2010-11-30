@@ -34,6 +34,7 @@ $.ajax({
 		if(data.entries.completed="null"){
 		$.each(data.entries, function(i,item){
 			var title = item.title;
+			if(item.start_at != null){
 			var startarry = item.start_at.split(" ");
 			var start = startarry[0];
 			if(start==today){
@@ -44,6 +45,7 @@ $.ajax({
 			if(start==tomorrow){
 			$('#next').append('<span><li>' + title + '</li></span>')
 			}
+		}
 		});
 		}
 	}

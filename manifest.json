@@ -1,6 +1,6 @@
 {
 	"name":"Easy2Do",
-	"version":"0.1.1",
+	"version":"0.1.2",
 	"description":"This is a simply to-do list extension for Google Chrome.",
 	"icons":{
 		"128":"img/icon128.png",

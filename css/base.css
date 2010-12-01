@@ -110,4 +110,5 @@ li{
 	border-bottom: 1px dashed #c0c0c0;
 	padding: 10px 0px 5px 0px;
 	width: 300px;
+	list-style: none;
 }

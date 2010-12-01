@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>Easy2Do</title>		
 		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/add.css" />
 		<script src="js/Base64.js" type="text/javascript"></script>
 		<script src="js/jquery.min.js" type="text/javascript"></script>
 		<script src="js/jquery.scrollTo.js" type="text/javascript"></script>
@@ -21,12 +22,14 @@
 				<section id="message"></section>
 				<a href="#" id="newtask">+Add+</a>
 				<section id="add">
-				<input type="text" name="Title" value="Title" />
-				<select name="due">
-					<option value="td" selected="selected">Today</option>
-					<option value="tm">Tomorrow</option>
-				</select>
-				<input type="submit" name="submit" />
+				<form method="post" action="" id="new_task">
+					<input type="text" name="Title" value="input your title here"/>
+					<select name="due_date">
+						<option value="td" selected="selected">Today</option>
+						<option value="tm">Tomorrow</option>
+					</select>
+					<input type="submit" name="newtask" value="submit" />
+				</form>
 				</section>
 				<section id="slider">
 				<section class="scroll">

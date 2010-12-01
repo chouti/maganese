@@ -21,7 +21,7 @@ $(document).ready(function () {
 
 	// collect the scroll object, at the same time apply the hidden overflow
 	// to remove the default scrollbars that will appear
-	var $scroll = $('#slider .scroll').css('overflow', 'hidden');
+	var $scroll = $('#slider .scroll').css('overflow-y', 'auto');
 
 	// apply our left + right buttons
 	$scroll

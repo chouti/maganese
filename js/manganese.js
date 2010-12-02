@@ -34,7 +34,6 @@ $.ajax({
 		$.each(data.entries, function(i,item){
 			var title = item.title;
 			if(item.start_at != null && item.completed==null && item.trashed==null){
-			console.log(item);
 			var startarry = item.start_at.split(" ");
 			var start = startarry[0];
 			if(start==today){

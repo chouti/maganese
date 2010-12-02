@@ -13,3 +13,19 @@ img{
 #newtask img{
 	vertical-align: bottom;
 }
+
+#add, #add form{
+	width: 350px;
+}
+
+#add input{
+	width: 200px;
+}
+
+#add select{
+	width: 80px;
+}
+
+#add submit{
+	width: 60px;
+}

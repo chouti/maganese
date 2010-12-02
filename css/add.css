@@ -14,8 +14,11 @@ img{
 	vertical-align: bottom;
 }
 
+#add {
+	padding: 3px;
+}
 #add, #add form{
-	width: 350px;
+	width: 370px;
 }
 
 #add input{

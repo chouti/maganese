@@ -24,8 +24,8 @@
 				<a href="#" id="newtask">Add task <img src="img/add.png" alt="add" /></a>
 				</section>
 				<section id="add">
-				<form method="post" action="" id="new_task">
-					<input type="text" name="Title" value="input your title here"/>
+				<form method="post" action="" name="new_task" id="new_task">
+					<input type="text" name="Title" value="input your title here" onFocus="clearform()"/>
 					<select name="due_date">
 						<option value="td" selected="selected">Today</option>
 						<option value="tm">Tomorrow</option>

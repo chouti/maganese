@@ -1,16 +1,17 @@
 #operater {
 	padding: 5px;
+	width:370px;
 }
 
 img{
 	width:auto;
 }
 
-#newtask{
+#addtask{
 	text-decoration:none;
 }
 
-#newtask img{
+#addtask img{
 	vertical-align: bottom;
 }
 

@@ -24,5 +24,19 @@ $.ajaxSetup({
 	dataType: 'json',
 	beforeSend: function(req){
 		req.setRequestHeader('Authorization', auth);
-	}
+	},
+	contentType: "application/json; charset=utf-8"
 });
+
+
+function open_option() {
+		var url = chrome.extension.getURL('options.html');
+		chrome.tabs.create({
+		url: url,
+		selected: true
+		});
+}
+
+function clearform(){
+	document.new_task.title.value=""
+}

@@ -11,9 +11,8 @@
 		<script src="js/jquery.localscroll.js" type="text/javascript"></script>
 		<script src="js/jquery.serialScroll.js" type="text/javascript"></script>
 		<script src="js/scroll.js" type="text/javascript"></script>
-		<script src="js/manganese.js" type="text/javascript"></script>
-		<script src="js/add.js" type="text/javascript"></script>
-		<script src="js/json_sans_eval.js" type="text/javascript"></script>
+		<script src="js/common.js" type="text/javascript"></script>
+		<script src="js/doit.js" type="text/javascript"></script>
 		<script src="js/a.js" type="text/javascript"></script>
 	</head>
 	<body>
@@ -22,14 +21,14 @@
 			<header><h1>Easy2Do</h1></header>
 				<section id="message"></section>
 				<section id="operater">
-				<a href="#" id="newtask">Add task <img src="img/add.png" alt="add" /></a>
+				<a href="#" id="addtask">Add task <img src="img/add.png" alt="add" /></a>
 				</section>
 				<section id="add">
 				<form method="post" action="" name="new_task" id="new_task">
 					<input type="text" name="title" value="input your title here" onFocus="clearform()"/>
 					<select name="start_at">
-						<option value=showdate(0) selected="selected">Today</option>
-						<option value=showdate(1)>Tomorrow</option>
+						<option value="today" selected="selected">Today</option>
+						<option value="tomorrow">Tomorrow</option>
 					</select>
 					<input type="submit" value="submit" style="width: 55px;" />
 				</form>

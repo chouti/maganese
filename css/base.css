@@ -61,6 +61,11 @@ header{
 	width: 350px;
 } 
 
+#complete_checkbox{
+	width: auto;
+	margin-right: 3px;
+}
+
 .scroll {
 	height: 450px;
 	width: 350px;

@@ -9,11 +9,17 @@ function	get_user_tasks(){
 		$.each(data.entries, function(i,item){
 			var task_title=item.title;
 			var easy2do_tasks=item.start_at!=null&&item.completed==null&&item.trashed==null;
+			var task_id=item.id;
 			if(easy2do_tasks){
 				var start_at_array=item.start_at.split(" ");
 				var start_at=start_at_array[0];
-				if(start_at==today){$('#intime').append('<span><li>' + task_title + '</li></span>');}else if(start_at<today){$('#overdue').append('<span><li>' + task_title + '</li></span>');};
-				if(start_at==tomorrow){$('#next').append('<span><li>' + task_title + '</li></span>');}
+				var new_pair={task_id:task_title};
+				if(start_at==today){
+					$('#intime').append('<li><input type="checkbox" name="complete_task" id="complete_checkbox" value="'+(task_id)+'" /><span id="origin_task">' + task_title + '</span></li>');}
+					else if(start_at<today){
+						$('#overdue').append('<li><input type="checkbox" name="complete_task" id="complete_checkbox" value="'+(task_id)+'" /><span id="origin_task">' + task_title + '</span></li>');};
+				if(start_at==tomorrow){
+					$('#next').append('<li><input type="checkbox" name="complete_task" id="complete_checkbox" value="'+(task_id)+'" /><span id="origin_task">' + task_title + '</span></li>');}
 			}
 		})
 	});
@@ -36,11 +42,26 @@ function show_add_task(){
 	});
 }
 
+function complete_task(){
+		var checked_id=$("input:checked").val();
+		$.get(tasks,function(data){
+		$.each(data.entries, function(i,item){
+			if(item.id==checked_id){
+				console.log(item);
+			}
+		});
+	});
+
+}
+
 $(document).ready(function() {
 	show_add_task();
-	get_user_info();
 	get_user_tasks();
 	$('#new_task').submit(function(){
-		post_user_tasks();
+	post_user_tasks();
 	});
+	$('checkbox').click(function(){
+		complete_task();
+	});
+
 });

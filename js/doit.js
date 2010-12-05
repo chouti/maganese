@@ -47,7 +47,9 @@ function complete_task(){
 		$.get(tasks,function(data){
 		$.each(data.entries, function(i,item){
 			if(item.id==checked_id){
-				console.log(item);
+				var taskobj=item;
+				var taskobj.compelted=today;
+				
 			}
 		});
 	});

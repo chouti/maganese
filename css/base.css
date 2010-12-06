@@ -61,9 +61,10 @@ header{
 	width: 350px;
 } 
 
-#complete_checkbox{
+#complete_task{
 	width: auto;
 	margin-right: 3px;
+	vertical-align: bottom;
 }
 
 .scroll {

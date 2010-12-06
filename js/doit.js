@@ -15,11 +15,11 @@ function	get_user_tasks(){
 				var start_at=start_at_array[0];
 				var new_pair={task_id:task_title};
 				if(start_at==today){
-					$('#intime').append('<li><input type="checkbox" name="complete_task" id="complete_checkbox" value="'+(task_id)+'" /><span id="origin_task">' + task_title + '</span></li>');}
+					$('#intime').append('<li><img src="img/complete.png" id="complete_task" value="'+(task_id)+'" /><span id="origin_task">' + task_title + '</span></li>');}
 					else if(start_at<today){
-						$('#overdue').append('<li><input type="checkbox" name="complete_task" id="complete_checkbox" value="'+(task_id)+'" /><span id="origin_task">' + task_title + '</span></li>');};
+						$('#overdue').append('<li><img src="img/complete.png" id="complete_task" value="'+(task_id)+'" /><span id="origin_task">' + task_title + '</span></li>');};
 				if(start_at==tomorrow){
-					$('#next').append('<li><input type="checkbox" name="complete_task" id="complete_checkbox" value="'+(task_id)+'" /><span id="origin_task">' + task_title + '</span></li>');}
+					$('#next').append('<li><img src="img/complete.png" id="complete_task" value="'+(task_id)+'" /><span id="origin_task">' + task_title + '</span></li>');}
 			}
 		})
 	});
@@ -37,8 +37,16 @@ function post_user_tasks(){
 
 function show_add_task(){
 	$('#add').hide();
+	$('#cancel_add').hide();
 	$('#addtask').click(function(){
 		$('#add').show('slow');
+		$('#addtask').hide();
+		$('#cancel_add').show();
+	});
+	$('#cancel_add').click(function(){
+		$('#add').hide('slow');
+		$('#cancel_add').hide();
+		$('#addtask').show();
 	});
 }
 
@@ -46,11 +54,7 @@ function complete_task(){
 		var checked_id=$("input:checked").val();
 		$.get(tasks,function(data){
 		$.each(data.entries, function(i,item){
-			if(item.id==checked_id){
-				var taskobj=item;
-				var taskobj.compelted=today;
-				
-			}
+			alert(item.title);
 		});
 	});
 
@@ -62,8 +66,6 @@ $(document).ready(function() {
 	$('#new_task').submit(function(){
 	post_user_tasks();
 	});
-	$('checkbox').click(function(){
-		complete_task();
-	});
-
+	$('#complete_checkbox').bind('onclick',function(){complete_task});
+	
 });

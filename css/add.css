@@ -7,11 +7,11 @@ img{
 	width:auto;
 }
 
-#addtask{
+#addtask, #cancel_add{
 	text-decoration:none;
 }
 
-#addtask img{
+#addtask img, #cancel_add img{
 	vertical-align: bottom;
 }
 

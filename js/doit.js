@@ -8,18 +8,18 @@ function	get_user_tasks(){
 	$.get(tasks, function(data){
 		$.each(data.entries, function(i,item){
 			var task_title=item.title;
-			var easy2do_tasks=item.start_at!=null&&item.completed==null&&item.trashed==null;
+			var easy2do_tasks=item.start_at!=null&&item.completed==null&&item.trashed==null&&item.assignment==null;
 			var task_id=item.id;
 			if(easy2do_tasks){
 				var start_at_array=item.start_at.split(" ");
 				var start_at=start_at_array[0];
 				var new_pair={task_id:task_title};
 				if(start_at==today){
-					$('#intime').append('<li><img src="img/complete.png" id="complete_task" value="'+(task_id)+'" /><span id="origin_task">' + task_title + '</span></li>');}
+					$('#intime').append('<li><a href="#"><img src="img/complete.png" id="complete_task" value="'+(task_id)+'" /></a><span id="origin_task">' + task_title + '</span></li>');}
 					else if(start_at<today){
-						$('#overdue').append('<li><img src="img/complete.png" id="complete_task" value="'+(task_id)+'" /><span id="origin_task">' + task_title + '</span></li>');};
+						$('#overdue').append('<li><a href="#"><img src="img/complete.png" id="complete_task" value="'+(task_id)+'" /></a><span id="origin_task">' + task_title + '</span></li>');};
 				if(start_at==tomorrow){
-					$('#next').append('<li><img src="img/complete.png" id="complete_task" value="'+(task_id)+'" /><span id="origin_task">' + task_title + '</span></li>');}
+					$('#next').append('<li><a href="#"><img src="img/complete.png" id="complete_task" value="'+(task_id)+'" /></a><span id="origin_task">' + task_title + '</span></li>');}
 			}
 		})
 	});
@@ -66,6 +66,8 @@ $(document).ready(function() {
 	$('#new_task').submit(function(){
 	post_user_tasks();
 	});
-	$('#complete_checkbox').bind('onclick',function(){complete_task});
+	$('#complete_task').click(function(){
+		complete_task
+	});
 	
 });

@@ -5,7 +5,7 @@ function	get_user_info(){
 }
 
 function	get_user_tasks(){
-	$.get(tasks, function(data){
+	$.getJSON(tasks, function(data){
 		$.each(data.entries, function(i,item){
 			var task_title=item.title;
 			var easy2do_tasks=item.start_at!=null&&item.completed==null&&item.trashed==null&&item.assignment==null;
@@ -15,11 +15,11 @@ function	get_user_tasks(){
 				var start_at=start_at_array[0];
 				var new_pair={task_id:task_title};
 				if(start_at==today){
-					$('#intime').append('<li><a href="#"><img src="img/complete.png" id="complete_task" value="'+(task_id)+'" /></a><span id="origin_task">' + task_title + '</span></li>');}
+					$('#intime').append('<li><input type="image" id="complete_task" src="img/complete.png" value="'+(task_id)+'"><span id="origin_task">' + task_title + '</span></li>');}
 					else if(start_at<today){
-						$('#overdue').append('<li><a href="#"><img src="img/complete.png" id="complete_task" value="'+(task_id)+'" /></a><span id="origin_task">' + task_title + '</span></li>');};
+						$('#overdue').append('<li><input type="image" id="complete_task" src="img/complete.png" value="'+(task_id)+'"><span id="origin_task">' + task_title + '</span></li>');};
 				if(start_at==tomorrow){
-					$('#next').append('<li><a href="#"><img src="img/complete.png" id="complete_task" value="'+(task_id)+'" /></a><span id="origin_task">' + task_title + '</span></li>');}
+					$('#next').append('<li><input type="image" id="complete_task" src="img/complete.png" value="'+(task_id)+'"><span id="origin_task">' + task_title + '</span></li>');}
 			}
 		})
 	});
@@ -50,14 +50,20 @@ function show_add_task(){
 	});
 }
 
-function complete_task(){
-		var checked_id=$("input:checked").val();
-		$.get(tasks,function(data){
-		$.each(data.entries, function(i,item){
-			alert(item.title);
-		});
+function complete_user_task(){
+	$.getJSON(tasks, function(data){
+		var tasksobj={};
+		var entriesobj=jQuery.parseJSON(data.entries);
+		for(var i=entriesobj.length;i--;){
+			var entry=entriesobj[i];
+			items[entry.id]=entry;
+			$('#complete_task').click(function() {
+				var item=items[this.id];
+				alert(item.title);
+			});
+		}
+		
 	});
-
 }
 
 $(document).ready(function() {
@@ -66,8 +72,5 @@ $(document).ready(function() {
 	$('#new_task').submit(function(){
 	post_user_tasks();
 	});
-	$('#complete_task').click(function(){
-		complete_task
-	});
-	
+	complete_user_task();
 });

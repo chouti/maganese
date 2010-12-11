@@ -5,9 +5,6 @@ function	get_user_info(){
 }
 
 function	get_user_tasks(){
-	$('#intime').empty();
-	$('#overdue').empty();
-	$('#next').empty();
 	$.getJSON(tasks, function(data){
 		$.each(data.entries, function(i,item){
 			var task_title=item.title;

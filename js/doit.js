@@ -65,12 +65,20 @@ function complete_user_task(origin_id){
 }
 
 function advertise(){
-	if($('input[name="complete_intime"]').length==0&&$('input[name="complete_overdue"]').length==0){
+	if(localStorage.length==0){
+		$('#now').hide();
+		$('#before').hide();
+		$('#operater').hide();
+		$('#feature').hide();
+		$('#today').append("<p id='adv'>You need login your Doit.im account first.</p>");
+		$('#tomorrow').append("<p id='adv'>You need login your Doit.im account first.</p>");
+	}
+	else  if($('input[name="complete_intime"]').length==0&&$('input[name="complete_overdue"]').length==0){
 		$('#now').hide();
 		$('#before').hide();
 		$('#today').append("<p id='adv'>Wow! You've done all your tasks for today!<br /><br /> Or take a look at your tomorrow's tasks...</p>");
 	}
-	if($('input[name="complete_next"]').length==0){
+	if(localStorage.length!=0&&$('input[name="complete_next"]').length==0){
 		$('#feature').hide();
 		$('#tomorrow').append("<p id='adv'>Hola! No tasks for tomorrow, how about create some?</p>")
 	}

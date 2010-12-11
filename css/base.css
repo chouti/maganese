@@ -61,7 +61,7 @@ header{
 	width: 350px;
 } 
 
-#complete_task{
+#intime, #overdue, #next, input{
 	width: auto;
 	margin-right: 3px;
 	vertical-align: bottom;

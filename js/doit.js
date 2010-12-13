@@ -84,12 +84,26 @@ function advertise(){
 	}
 }
 
+function update_badge(){
+	if($('input[name*="complete"]').length>0) color = [255, 0, 0, 255]
+	else color = [0, 255, 0, 255];
+	
+	chrome.browserAction.setBadgeBackgroundColor({
+		color: color
+	})
+	
+	chrome.browserAction.setBadgeText({
+		text: '' + $('input[name*="complete"]').length
+	})
+}
+
 $(document).ready(function() {
 	setTimeout(function(){advertise();},1500);
 	show_add_task();
 	get_user_tasks();
 	$('#new_task').submit(function(){
 	post_user_tasks();
+	update_badge();
 	});
 	setTimeout(function(){
 		$('input[name*="complete"]').click(function(){
@@ -98,5 +112,6 @@ $(document).ready(function() {
 			complete_user_task(origin_id);
 			$(this).parent('li').slideUp();
 		});
+		update_badge();
 		},1500);
 });

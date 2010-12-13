@@ -70,8 +70,8 @@ function advertise(){
 		$('#before').hide();
 		$('#operater').hide();
 		$('#feature').hide();
-		$('#today').append("<p id='adv'>You need login your Doit.im account first.</p>");
-		$('#tomorrow').append("<p id='adv'>You need login your Doit.im account first.</p>");
+		$('#today').append("<p id='adv'>You need to login your Doit.im account first.</p>");
+		$('#tomorrow').append("<p id='adv'>You need to login your Doit.im account first.</p>");
 	}
 	else  if($('input[name="complete_intime"]').length==0&&$('input[name="complete_overdue"]').length==0){
 		$('#now').hide();

@@ -61,7 +61,7 @@ header{
 	width: 350px;
 } 
 
-#complete_task{
+#intime, #overdue, #next, input{
 	width: auto;
 	margin-right: 3px;
 	vertical-align: bottom;
@@ -110,6 +110,16 @@ footer a{
 	color: white;
 	margin: 0px 5px 0px 0px;
 	padding: 0px 5px 0px 0px;
+}
+
+#adv{
+	margin: 25px auto;
+	padding: 20px;
+	width: 300px;
+	font-size: 18px;
+	color: white;
+	background: #004c8a; opacity: 0.5;
+	border-radius: 8px;
 }
 
 li{

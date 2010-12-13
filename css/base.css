@@ -1,7 +1,7 @@
 *{
 	margin: 0;
 	padding: 0;
-	width: 340px
+	width: 380px
 }
 
 #wrapper {
@@ -45,25 +45,34 @@ header{
 }
 
 #slider {
-	width: 300px;
-	height: 400px;
+	width: 350px;
+	height: auto;
 	margin: 0 auto;
+	padding: 20px 0px;
 	position: relative;
 }
 
 #today, #tomorrow {
-	margin: 20px auto;
 	text-shadow: none;
+	width: 350px;
+}
+
+#intime, #overdue, #next{
+	width: 350px;
+} 
+
+#intime, #overdue, #next, input{
+	width: auto;
+	margin-right: 3px;
+	vertical-align: bottom;
 }
 
 .scroll {
-	height: 250px;
-	width: 300px;
-	overflow: auto;
+	height: 450px;
+	width: 350px;
 	overflow-x: hidden;
 	position: relative;
 	clear: left;
-	background:repeat-x scroll left bottom;
 }
 
 .scrollButtons {
@@ -74,11 +83,11 @@ header{
 }
 
 .scrollButtons.left {
-	left: -20px;
+	left: -15px;
 }
 
 .scrollButtons.right {
-	right: -20px;
+	right: -15px;
 }
 
 
@@ -106,5 +115,6 @@ footer a{
 li{
 	border-bottom: 1px dashed #c0c0c0;
 	padding: 10px 0px 5px 0px;
-	width: 300px;
+	width: 330px;
+	list-style: none;
 }

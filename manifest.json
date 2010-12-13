@@ -1,6 +1,6 @@
 {
 	"name":"Easy2Do",
-	"version":"0.1.1",
+	"version":"0.2.0",
 	"description":"This is a simply to-do list extension for Google Chrome.",
 	"icons":{
 		"128":"img/icon128.png",
@@ -11,7 +11,7 @@
 	"https://api.doit.im/",
 	"tabs"],
 	"browser_action":{
-		"default_title":"Manganese",
+		"default_title":"Easy2Do",
 		"default_icon":"img/icon48.png",
 		"default_popup":"manganese.html"
 	},

@@ -1,0 +1,35 @@
+#operater {
+	padding: 5px;
+	width:370px;
+}
+
+img{
+	width:auto;
+}
+
+#addtask, #cancel_add{
+	text-decoration:none;
+}
+
+#addtask img, #cancel_add img{
+	vertical-align: bottom;
+}
+
+#add {
+	padding: 3px;
+}
+#add, #add form{
+	width: 370px;
+}
+
+#add input{
+	width: 200px;
+}
+
+#add select{
+	width: 80px;
+}
+
+#add submit{
+	width: 60px;
+}

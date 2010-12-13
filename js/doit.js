@@ -85,7 +85,7 @@ function advertise(){
 }
 
 $(document).ready(function() {
-	setTimeout(function(){advertise();},1000);
+	setTimeout(function(){advertise();},1500);
 	show_add_task();
 	get_user_tasks();
 	$('#new_task').submit(function(){
@@ -98,5 +98,5 @@ $(document).ready(function() {
 			complete_user_task(origin_id);
 			$(this).parent('li').slideUp();
 		});
-		},800);
+		},1500);
 });

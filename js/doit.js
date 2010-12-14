@@ -1,9 +1,3 @@
-function	get_user_info(){
-	$.get(settings, function(data) {
-	  $('#user_info').append("You've logged in as:"+data.username)
-	});
-}
-
 function	get_user_tasks(){
 	$.getJSON(tasks, function(data){
 		$.each(data.entries, function(i,item){
@@ -97,6 +91,16 @@ function update_badge(){
 	})
 }
 
+function open_option(){
+	$('#options').click(function(){
+		var url=chrome.extension.getURL('options.html');
+		chrome.tabs.create({
+			url: url,
+			selected: true
+		});
+	});
+}
+
 $(document).ready(function() {
 	setTimeout(function(){advertise();},1500);
 	show_add_task();
@@ -114,4 +118,5 @@ $(document).ready(function() {
 		});
 		update_badge();
 		},1500);
+		open_option();
 });

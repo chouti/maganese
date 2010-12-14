@@ -40,3 +40,14 @@ function open_option() {
 function clearform(){
 	document.new_task.title.value=""
 }
+
+function	get_user_info(){
+		$('#userinfo').empty();
+		if (localStorage.length==0) {
+			$("#userinfo").append('<p>Need login before loading user information...</p>')} else{
+		$.get(settings, function(data) {
+		$('#content').hide();
+	  $('#userinfo').append("<p>You've logged in as: "+data.username+'<br/><br/> Not '+data.username+'?<a href="#" id="clear">Logout</a></p>')
+	});
+}
+}

@@ -3,6 +3,7 @@ function	get_user_tasks(){
 		$.each(data.entries, function(i,item){
 			var task_title=item.title;
 			var easy2do_tasks=item.start_at!=null&&item.completed==null&&item.trashed==null&&item.assignment==null&&item.repeater==null;
+			var repeat_tasks=item.start_at!=null&&item.completed==null&&item.trashed==null&&item.assignment==null&&item.repeater!=null;
 			var task_id=item.id;
 			if(easy2do_tasks){
 				var start_at_array=item.start_at.split(" ");
@@ -14,6 +15,12 @@ function	get_user_tasks(){
 						$('#overdue').append('<li><input type="image" name="complete_overdue" src="img/complete.png" value="'+(task_id)+'"><span id="origin_task">' + task_title + '</span></li>');};
 				if(start_at==tomorrow){
 					$('#next').append('<li><input type="image" name="complete_next" src="img/complete.png" value="'+(task_id)+'"><span id="origin_task">' + task_title + '</span></li>');}
+			}
+			if(repeat_tasks){
+				var repeater=JSON.stringify(item.repeater);
+				
+				console.log(JSON.stringify(item))
+				console.log('repeater:    '+item.repeater.mode);
 			}
 		})
 	});

@@ -51,3 +51,7 @@ function	get_user_info(){
 	});
 }
 }
+
+function daily(){
+	
+}
